@@ -10,9 +10,6 @@ from django.core.mail import EmailMessage, send_mail
 from django.conf import settings
 
 
-
-
-
 class HomeView(generic.ListView):
     template_name = 'teasite/home.html'
     context_object_name = 'all_people'
