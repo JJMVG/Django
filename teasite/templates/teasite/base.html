@@ -1,0 +1,81 @@
+<!DOTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %} Tea round {% endblock %}</title>
+
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href ="{% static 'teasite/style.css' %}"/>
+<link rel ="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Caveat" rel="stylesheet"> 
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	
+	<!-- Header -->
+		<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+			<a class="navbar-brand" href="{% url 'teasite:home' %}">Tea Room</a>
+		</div>
+		
+		<!-- Items -->
+		<div class="collapse navbar-collapse" id="topNavBar">
+		<ul class="nav navbar-nav">
+			<li class="">
+				<a href="#">
+				<span class="glyphicon glyphicon glyphicon-leaf" aria-hidden="true"></span>&nbsp;
+				Tea
+				</a>
+			</li>
+			<li class="">
+				<a href="#">
+				<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>&nbsp;
+				Cofveve
+				</a>
+			</li>
+		</ul>
+		
+		
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li class="active">
+				<a href="{% url 'teasite:person-add'%}">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;
+				Add Person
+				</a>
+			</li>
+			<li class="">
+				<a href="#">
+				<span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;
+				Logout
+				</a>
+			</li>
+		
+		</ul>
+		
+		</div>
+	</div>
+	
+	
+
+
+</nav>
+
+<div class="container-fluid">
+{% block body %}
+{% endblock %}
+
+</div>
+</body>
+</html>

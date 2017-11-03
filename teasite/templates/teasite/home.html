@@ -1,0 +1,47 @@
+{%extends 'teasite/base.html'%}
+
+{% block body %}
+
+
+	<ul class="list-inline list-font">
+		{% for record in all_people %}
+
+		<li><a href="{% url 'teasite:detail' record.id %}">{{record.name}}</a></li>
+		<form action="{% url 'teasite:person-delete' record.id %}" method="post" style="display: inline;">
+		{% csrf_token %}
+		<input type="hidden" name ="record_id" value="{{record.id }}"/> 
+		<button type ="submit" class="btn btn-default btn-sm">
+		<span class="glyphicon glyphicon-trash"></span>
+		</button>
+		</form>
+		<a href="{% url 'teasite:person-update' record.id %}" method="post" style="display: inline;">
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		</button>
+		</a>
+
+		{%endfor%}
+		
+		
+<h1>Who will make the tea?</h1>
+<div>
+<input type="button" id="buttonID" name="_mail" value="Go!">
+
+</div>
+
+	</ul>
+<script>
+$('#buttonID').click(function() {    
+    $.ajax({
+        url: 'http://127.0.0.1:8000/tea/teamail/',
+        method: 'get',
+        success: function (data) {        
+            alert(data);
+			console.log(data);
+        },
+		failure: function(data){
+			alert('Error');
+		}
+    });
+});
+</script>		
+{% endblock %}

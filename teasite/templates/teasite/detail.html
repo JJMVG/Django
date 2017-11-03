@@ -1,0 +1,27 @@
+{%extends 'teasite/base.html'%}
+
+{% block body %}
+
+
+		{% if error_message %}
+			<p>{{error_message}}</p>
+			
+		{% endif %}
+
+	<h1 class="title-font">This is {{person.name}}</h1>
+	<div>
+		<img class="img-thumbnail" src="{{person.profile_picture.url}}">
+		
+	</div>
+		<ul class="list-inline list-font">
+		<li><b>Milk:</b>{{person.milk}} </li>
+		<li><b>Sugar:</b> {{person.sugar}} </li>
+		<li><b>Drink:</b> {{person.drink}} </li>
+		
+		
+		
+		</ul>
+		
+
+
+{% endblock %}

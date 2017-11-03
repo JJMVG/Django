@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c563c73d-15ea-4955-b774-875d691ec643}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Kryx\settings.py" />
+    <Compile Include="Kryx\urls.py" />
+    <Compile Include="Kryx\wsgi.py" />
+    <Compile Include="Kryx\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="teasite\admin.py" />
+    <Compile Include="teasite\apps.py" />
+    <Compile Include="teasite\mail.py" />
+    <Compile Include="teasite\migrations\0001_initial.py" />
+    <Compile Include="teasite\migrations\0002_person_email.py" />
+    <Compile Include="teasite\migrations\0003_person_sugar.py" />
+    <Compile Include="teasite\migrations\__init__.py" />
+    <Compile Include="teasite\models.py" />
+    <Compile Include="teasite\tests.py" />
+    <Compile Include="teasite\urls.py" />
+    <Compile Include="teasite\views.py" />
+    <Compile Include="teasite\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="media\12024424.jpg" />
+    <Content Include="media\12024424_S5HgEi1.jpg" />
+    <Content Include="media\8a108cb6ae004eca31286991ba35ac7cf83bf794_128.jpg" />
+    <Content Include="media\facepalm.jpg" />
+    <Content Include="media\jaxb36tx44gz.jpg" />
+    <Content Include="media\jaxb36tx44gz_9WgCwwl.jpg" />
+    <Content Include="media\jaxb36tx44gz_TfFzM5w.jpg" />
+    <Content Include="media\TROLLFACE.png" />
+    <Content Include="teasite\static\teasite\images\background-2847957_1920.jpg" />
+    <Content Include="teasite\static\teasite\images\background.png" />
+    <Content Include="teasite\static\teasite\images\stardust\readme.txt" />
+    <Content Include="teasite\static\teasite\images\stardust\stardust_%402X.png" />
+    <Content Include="teasite\static\teasite\style.css" />
+    <Content Include="teasite\static\teasite\teabot.js" />
+    <Content Include="teasite\templates\teasite\base.html" />
+    <Content Include="teasite\templates\teasite\detail.html" />
+    <Content Include="teasite\templates\teasite\form-template.html" />
+    <Content Include="teasite\templates\teasite\home.html" />
+    <Content Include="teasite\templates\teasite\person_form.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kryx" />
+    <Folder Include="media" />
+    <Folder Include="teasite" />
+    <Folder Include="teasite\migrations" />
+    <Folder Include="teasite\static\" />
+    <Folder Include="teasite\static\teasite" />
+    <Folder Include="teasite\static\teasite\images" />
+    <Folder Include="teasite\static\teasite\images\stardust" />
+    <Folder Include="teasite\templates\" />
+    <Folder Include="teasite\templates\teasite" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

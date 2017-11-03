@@ -1,0 +1,25 @@
+body{
+	background:white url("images/background-2847957_1920.jpg")
+}
+
+a{
+	color:inherit;
+}
+
+.navbar{
+	border-radius:5;
+}
+.navbar-brand{
+	font-family: 'Satisfy', cursive;
+	font-size:25px;
+}
+
+.list-font{
+    font-family: 'Amatic SC', cursive;
+	font-size:26px;
+}
+
+.title-font{
+	font-family: 'Caveat', cursive;
+	font-size:46px;
+}
