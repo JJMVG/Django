@@ -12,11 +12,6 @@ from django.conf import settings
 
 
 
-def home(request):
-    all_people = Person.objects.all()
-
-    context ={'all_people':all_people}
-    return render(request,'teasite/home.html',context)
 
 class HomeView(generic.ListView):
     template_name = 'teasite/home.html'
